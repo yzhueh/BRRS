@@ -1,1 +1,3 @@
 # BRRS
+
+  We therefore employed a machine-learning-assisted Band Results Readout System (BRRS) to distinguish chromogenic bands from complex background and obtain more reliable diagnostic results (Figure 5A). BRRS consisted of three steps: imaging the whole strip using a smartphone camera within a black chamber, isolating the test bands in the strip with a deep-learning-based segmentation model, and classifying the results using machine-learning-based classification models. The initial photos were first preprocessed using YOLOv5s, a widely used deep-learning model which facilitated precise extraction of image features i.e. the test bands on the CoRPA strip (52). Specifically, the photos were reshaped into the same size and then segmented into single color bands.
