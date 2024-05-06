@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 n_classes = 5
 classifier = svm.SVC(kernel='linear', C=1, gamma='auto')
-data = pd.read_excel('D:\HKUST\data\data3.xlsx')
+data = pd.read_excel('data.xlsx')
 X = data.values[1:,5:7]
 Y = data.values[1:,0]
 Con = data.values[1:,0]
