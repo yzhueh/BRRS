@@ -1,0 +1,7 @@
+train: D:/s5m2_fxp/path/train.txt
+val:  D:/s5m2_fxp/path/val.txt
+test: D:/s5m2_fxp/path/test.txt
+# number of classes
+nc: 1
+
+names: ['sample']
