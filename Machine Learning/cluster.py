@@ -2,7 +2,6 @@
 """
 Created on Thu Sep  7 14:25:20 2023
 
-@author: Yingwen Huo
 """
 
 import numpy as np
@@ -17,7 +16,7 @@ from sklearn.cluster import MeanShift
 from sklearn.mixture import GaussianMixture
 #Origin data
 plt.figure(1)
-data = pd.read_excel('D:\HKUST\data\data3.xlsx')
+data = pd.read_excel('data.xlsx')
 #low+high
 # X = data.values[1:,6:8]
 # Y = data.values[1:,0]
@@ -61,7 +60,7 @@ result_kmeans = np.dstack((y_pred,Y,a))
 plt.scatter(X_high,Y,label = 'High sensitive', marker='o')
 plt.scatter(X_low,Y,label = 'Low sensitive',marker='^')
 
-# # #亲和力传播聚类
+# # #Affinity Propagation Clustering
 # # plt.figure(3)
 # # y_pred = AffinityPropagation().fit_predict(X)
 # # plt.scatter(X[:, 0], X[:, 1], c=y_pred)
@@ -69,7 +68,7 @@ plt.scatter(X_low,Y,label = 'Low sensitive',marker='^')
 # # plt.xlabel("Low-sensitive",fontsize= 18)
 # # plt.ylabel("High-sensitive",fontsize= 18)
 
-# #mini-batch KMeans聚类
+# #mini-batch KMeans Clustering
 # plt.figure(2)
 # y_pred = MiniBatchKMeans(n_clusters=3,batch_size=14).fit_predict(X)
 # result_mini = np.dstack((y_pred,Y,a))
@@ -87,7 +86,7 @@ plt.scatter(X_low,Y,label = 'Low sensitive',marker='^')
 # plt.ylabel("concentration(mg/0.5ml)",fontsize= 18)
 # plt.show()
 
-# # #聚合聚类
+# # #Aggregate clustering
 # plt.figure(3)
 # y_pred = AgglomerativeClustering(n_clusters=3,linkage='average').fit_predict(X)
 # result_ag = np.dstack((y_pred,Y,a))
@@ -105,7 +104,7 @@ plt.scatter(X_low,Y,label = 'Low sensitive',marker='^')
 # plt.show()
 
 
-# # #均值漂移聚类
+# # #Mean shift clustering
 # # plt.figure(6)
 # # y_pred = MeanShift().fit_predict(X)
 # # plt.scatter(X[:, 0], X[:, 1], c=y_pred)
@@ -114,7 +113,7 @@ plt.scatter(X_low,Y,label = 'Low sensitive',marker='^')
 # # plt.ylabel("High-sensitive",fontsize= 18)
 # # plt.show()
 
-# # #高斯混合模型
+# # #Gaussian Mixture Model
 # # plt.figure(7)
 # # y_pred = GaussianMixture(n_components=3).fit_predict(X)
 # # plt.scatter(X[:, 0], X[:, 1], c=y_pred)
