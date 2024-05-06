@@ -37,7 +37,7 @@ X_train, X_test, Con_train, Con_test = model_selection.train_test_split(X, Con,t
 
 
     
-#回归
+# Regression
 model1 = Ridge(alpha=0.5)
 model2 = SVR()
 model3 = LassoLarsCV()
@@ -49,7 +49,8 @@ model8 = LogisticRegression()
 
 # model1.fit(X_train, Con_train)
 # Con_pred = model1.predict(X_test)
-# #画图
+
+# #Plot
 # plt.figure(1)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('label',fontsize= 18)
@@ -63,7 +64,8 @@ model8 = LogisticRegression()
 model2.fit(X_train, Con_train)
 Con_pred = model2.predict(X_test)
 result_svr = np.dstack((Con_pred,Con_test))
-# #画图
+
+# #Plot
 # plt.figure(2)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('True value',fontsize= 18)
@@ -82,7 +84,8 @@ result_svr = np.dstack((Con_pred,Con_test))
 
 # model3.fit(X_train, Con_train)
 # Con_pred = model3.predict(X_test)
-# #画图
+
+# #Plot
 # plt.figure(3)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('label',fontsize= 18)
@@ -95,7 +98,8 @@ result_svr = np.dstack((Con_pred,Con_test))
 
 # model4.fit(X_train, Con_train)
 # Con_pred = model4.predict(X_test)
-# #画图
+
+# #Plot
 # plt.figure(4)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('label',fontsize= 18)
@@ -111,7 +115,8 @@ result_svr = np.dstack((Con_pred,Con_test))
 model5.fit(X_train, Con_train)
 Con_pred = model5.predict(X_test)
 result_rf = np.dstack((Con_pred,Con_test))
-# #画图
+
+# #Plot
 # # plt.figure(5)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('True value',fontsize= 18)
@@ -132,7 +137,8 @@ print("MSE =",MSE_score)
 model6.fit(X_train, Con_train)
 Con_pred = model6.predict(X_test) 
 result_dt = np.dstack((Con_pred,Con_test))
-# #画图
+
+# #Plot
 # plt.figure(6)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('True value',fontsize= 18)
@@ -154,7 +160,8 @@ print("MSE =",MSE_score)
 model7.fit(X_train, Con_train)
 Con_pred = model7.predict(X_test) 
 result_lr = np.dstack((Con_pred,Con_test))
-# #画图
+
+# #Plot
 # plt.figure(7)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('True value',fontsize= 18)
@@ -175,8 +182,9 @@ result_lr = np.dstack((Con_pred,Con_test))
 
 
 # model8.fit(X_train, Con_train)
-# Con_pred = model8.predict(X_test) 
-# #画图
+# Con_pred = model8.predict(X_test)
+
+# #Plot
 # plt.figure(8)
 # plt.scatter(Con_test, Con_pred)
 # plt.xlabel('label',fontsize= 18)
@@ -206,7 +214,7 @@ result_lr = np.dstack((Con_pred,Con_test))
 #     # print(classification_report(Y_test, Y_pred, target_names=target_names))
     
     
-# #回归
+# #Regression
 #     # model = Ridge(alpha=0.5)
 #     model = SVR()
 #     model.fit(X_train, Con_train)
